@@ -24,10 +24,7 @@ echo "✅ Java Version: $("$JAVA_HOME/bin/java" -version 2>&1 | head -n 1)"
 
 echo ""
 echo "🎯 Starting build with all architectures:"
-echo "   - armeabi-v7a"
-echo "   - armeabi-v7a-neon" 
 echo "   - arm64-v8a"
-echo "   - x86"
 echo "   - x86_64"
 echo ""
 
@@ -36,7 +33,12 @@ echo "⏱️  This will take some time..."
 echo "🚀 Starting build now..."
 
 # Build with basic Android support (good balance of features vs build time)
-./android.sh --enable-android-media-codec --enable-android-zlib
+./android.sh \
+  --disable-arm-v7a \
+  --disable-arm-v7a-neon \
+  --disable-x86 \
+  --enable-android-media-codec \
+  --enable-android-zlib
 
 echo ""
 echo "✅ Build completed!"

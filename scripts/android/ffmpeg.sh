@@ -471,6 +471,13 @@ fi
   --disable-nvenc \
   --disable-vaapi \
   --disable-vdpau \
+  \
+  --disable-decoders --enable-decoder=aac \
+  --disable-encoders --enable-encoder=aac \
+  --disable-muxers   --enable-muxer=mp4,ipod \
+  --disable-demuxers --enable-demuxer=avi,mov,mp4,mpeg,image2 \
+  --disable-filters  --enable-filter=amix,aformat,aresample,anull \
+  \
   ${CONFIGURE_POSTFIX} 1>>"${BASEDIR}"/build.log 2>&1
 
 if [[ $? -ne 0 ]]; then

@@ -42,3 +42,8 @@ prebuilt/bundle-android-aar/ffmpeg-kit/ffmpeg-kit.aar
    ```
 
    **Note:** The smart-exception dependency is required because local AAR files don't automatically resolve transitive dependencies.
+
+## 📃 References
+
+- <https://github.com/arthenica/ffmpeg-kit/wiki/How-to-Decrease-Binary-Size>
+- <https://github.com/explaineverything/ffmpeg-kit>
