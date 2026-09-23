@@ -38,7 +38,8 @@ echo "🚀 Starting build now..."
   --disable-arm-v7a-neon \
   --disable-x86 \
   --enable-android-media-codec \
-  --enable-android-zlib
+  --enable-android-zlib \
+  --enable-openh264
 
 echo ""
 echo "✅ Build completed!"

@@ -472,11 +472,10 @@ fi
   --disable-vaapi \
   --disable-vdpau \
   \
-  --disable-decoders --enable-decoder=aac \
-  --disable-encoders --enable-encoder=aac \
-  --disable-muxers   --enable-muxer=mp4,ipod \
-  --disable-demuxers --enable-demuxer=avi,mov,mp4,mpeg,image2 \
-  --disable-filters  --enable-filter=amix,aformat,aresample,anull \
+  --enable-decoder=prores --enable-decoder=mjpeg \
+  --enable-filter=scale --enable-filter=format \
+  --enable-muxer=mov --enable-muxer=mp4 --enable-muxer=image2 \
+  --enable-demuxer=avi --enable-demuxer=mov --enable-demuxer=mp4 --enable-demuxer=mpeg --enable-demuxer=image2 \
   \
   ${CONFIGURE_POSTFIX} 1>>"${BASEDIR}"/build.log 2>&1
 
