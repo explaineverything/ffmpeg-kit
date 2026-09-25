@@ -32,13 +32,17 @@ echo ""
 echo "⏱️  This will take some time..."
 echo "🚀 Starting build now..."
 
-# Build with basic Android support (good balance of features vs build time)
+# Build with the EE Android feature set required by the whiteboard SDK.
+# Keep Android MediaCodec decoding enabled for large inputs such as 4K HEVC MOV.
+# Keep MP3 encoding enabled because `EEAssetsMultimediaConverter` converts
+# supported imported audio formats (including `.au`) to `.mp3`.
 ./android.sh \
   --disable-arm-v7a \
   --disable-arm-v7a-neon \
   --disable-x86 \
   --enable-android-media-codec \
-  --enable-android-zlib
+  --enable-openh264 \
+  --enable-lame
 
 echo ""
 echo "✅ Build completed!"
