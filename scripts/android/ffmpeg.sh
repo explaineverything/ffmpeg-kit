@@ -472,12 +472,19 @@ fi
   --disable-vaapi \
   --disable-vdpau \
   \
-  --enable-decoder=prores --enable-decoder=mjpeg \
-  --enable-filter=scale --enable-filter=format \
-  --enable-muxer=mov --enable-muxer=mp4 --enable-muxer=image2 \
-  --enable-demuxer=avi --enable-demuxer=mov --enable-demuxer=mp4 --enable-demuxer=mpeg --enable-demuxer=image2 \
+  --disable-decoders \
+  --enable-decoder=aac,ac3,alac,apac,eac3,flac,gif,h263,h264,h264_mediacodec,hevc,hevc_mediacodec,mjpeg,mp3,mpeg1video,mpeg2video,mpeg2_mediacodec,mpeg4,mpeg4_mediacodec,msmpeg4v3,opus,pcm_alaw,pcm_f32be,pcm_f32le,pcm_f64be,pcm_f64le,pcm_mulaw,pcm_s16be,pcm_s16le,pcm_s24be,pcm_s24le,pcm_s32be,pcm_s32le,prores,theora,vc1,vorbis,vp6,vp6a,vp6f,vp8,vp8_mediacodec,vp9,vp9_mediacodec,wmv1,wmv2,wmv3 \
+  --disable-encoders \
+  --enable-encoder=aac,libmp3lame,libopenh264,movtext,pcm_s24le \
+  --disable-muxers \
+  --enable-muxer=ffmetadata,mp3,mp4,wav \
+  --disable-demuxers \
+  --enable-demuxer=aac,ac3,aiff,asf,au,avi,caf,ffmetadata,flv,gif,matroska,mov,mpegps,mpegvideo,ogg,srt,wav \
+  --disable-protocols \
+  --enable-protocol=file \
   \
-  ${CONFIGURE_POSTFIX} 1>>"${BASEDIR}"/build.log 2>&1
+  ${CONFIGURE_POSTFIX} \
+  --disable-iconv 1>>"${BASEDIR}"/build.log 2>&1
 
 if [[ $? -ne 0 ]]; then
   echo -e "failed\n\nSee build.log for details\n"
