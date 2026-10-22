@@ -473,7 +473,7 @@ fi
   --disable-vdpau \
   \
   --disable-decoders \
-  --enable-decoder=aac,ac3,alac,apac,eac3,flac,gif,h263,h264,h264_mediacodec,hevc,hevc_mediacodec,mjpeg,mp3,mpeg1video,mpeg2video,mpeg2_mediacodec,mpeg4,mpeg4_mediacodec,msmpeg4v3,opus,pcm_alaw,pcm_f32be,pcm_f32le,pcm_f64be,pcm_f64le,pcm_mulaw,pcm_s16be,pcm_s16le,pcm_s24be,pcm_s24le,pcm_s32be,pcm_s32le,prores,theora,vc1,vorbis,vp6,vp6a,vp6f,vp8,vp8_mediacodec,vp9,vp9_mediacodec,wmv1,wmv2,wmv3 \
+  --enable-decoder=aac,ac3,adpcm_ima_qt,alac,apac,dvaudio,eac3,flac,gif,h263,h264,h264_mediacodec,hevc,hevc_mediacodec,mace3,mace6,mjpeg,mp3,mpeg1video,mpeg2video,mpeg2_mediacodec,mpeg4,mpeg4_mediacodec,msmpeg4v3,opus,pcm_alaw,pcm_f32be,pcm_f32le,pcm_f64be,pcm_f64le,pcm_mulaw,pcm_s16be,pcm_s16le,pcm_s24be,pcm_s24le,pcm_s32be,pcm_s32le,pcm_s8,pcm_u16be,pcm_u16le,pcm_u8,prores,qdm2,qdmc,theora,vc1,vorbis,vp6,vp6a,vp6f,vp8,vp8_mediacodec,vp9,vp9_mediacodec,wmv1,wmv2,wmv3 \
   --disable-encoders \
   --enable-encoder=aac,libmp3lame,libopenh264,movtext,pcm_f32le,pcm_s24le \
   --disable-muxers \
