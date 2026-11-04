@@ -12,7 +12,9 @@ echo "================================="
 export ANDROID_SDK_ROOT="$HOME/Library/Android/sdk"
 export ANDROID_HOME="$HOME/Library/Android/sdk"  # For Gradle compatibility
 export ANDROID_NDK_ROOT="$HOME/Library/Android/sdk/ndk/25.2.9519653"
-export JAVA_HOME="/Applications/Android Studio.app/Contents/jbr/Contents/Home"
+# Gradle 8.12 / AGP 8.2.2 cannot run on JDK 25 (bundled with newer Android Studio):
+# fails with "Type T not present". Pin JDK 17.
+export JAVA_HOME="$(/usr/libexec/java_home -v 17)"
 
 echo "✅ Android SDK: $ANDROID_SDK_ROOT"
 echo "✅ Android Home: $ANDROID_HOME"
